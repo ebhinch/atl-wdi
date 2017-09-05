@@ -61,6 +61,12 @@ for (var i = 0; i < 1857; i++) {
 //    (inclusive) and 1000 (exclusive); store the result in the variable
 //    `resNine`.
 var resNine;
+resNine = 0;
+for (var i = 0; i < 1000; i++) {
+  if (i % 7 === 0) {
+    resNine += i;
+  }
+}
 // Replace This Comment With Your Code
 
 // 10. For numbers 1-10, calculate n^n and then store the sum of all of these values in the variable `resTen`.
