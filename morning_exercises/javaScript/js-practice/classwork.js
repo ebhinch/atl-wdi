@@ -47,13 +47,15 @@ var resSeven = 5;
     }
   }
 
-// Replace This Comment With Your Code
 
 // 8. Write a `for` loop that counts from 0 (inclusive) to 1857 (exclusive) and
 //    calculates the sum of all of those numbers, storing the result in the
 //    variable `resEight`.
 var resEight;
-// Replace This Comment With Your Code
+resEight = 0;
+for (var i = 0; i < 1857; i++) {
+  resEight += i;
+}
 
 // 9. Using a `for` loop, calculate the sum of all multiples of 7 between 0
 //    (inclusive) and 1000 (exclusive); store the result in the variable
