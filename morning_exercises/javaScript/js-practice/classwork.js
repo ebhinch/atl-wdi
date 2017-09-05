@@ -9,30 +9,29 @@
 // by assigning the appropriate variable a value of either `true` or `false`.
 
 // 1. true || false 
-var resOne;
-// Replace This Comment With Your Code
+var resOne = true;
 
 // 2. null || ''
-var resTwo;
-// Replace This Comment With Your Code
+var resTwo = false;
 
 // 3. 'false' && true
-var resThree;
-// Replace This Comment With Your Code
+var resThree = true;
 
 // 4. !!0
-var resFour;
-// Replace This Comment With Your Code
+var resFour = false;
 
 // 5. !null && !undefined
-var resFive;
-// Replace This Comment With Your Code
+var resFive = true;
 
 /// Flow Control ///
 
 // 6. Write a `while` loop that increases `resSix` by 23 until `resSix` is five
 //    digits long. (Hint: take a look at the .toString() method)
-var resSix;
+var resSix = 5;
+while (resSix.toString().length < 5) {
+  resSix += 23;
+}
+
 // Replace This Comment With Your Code
 
 // 7. Write a `while` loop that increases `resSeven` by 12 when it's strictly
