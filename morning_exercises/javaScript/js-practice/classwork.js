@@ -67,11 +67,22 @@ for (var i = 0; i < 1000; i++) {
     resNine += i;
   }
 }
-// Replace This Comment With Your Code
+
 
 // 10. For numbers 1-10, calculate n^n and then store the sum of all of these values in the variable `resTen`.
 var resTen;
-// Replace This Comment With Your Code
+resTen = 0;
+
+for (var i = 0; i < 11; i++) {
+  var square = i * i;  
+}
+
+for (var j = 0; j < i; j++) {
+  resTen += square;
+}
+
+
+
 
 /// DO NOT EDIT BELOW THIS LINE ///
 module.exports = {
