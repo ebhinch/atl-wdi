@@ -28,16 +28,25 @@ var resFive = true;
 // 6. Write a `while` loop that increases `resSix` by 23 until `resSix` is five
 //    digits long. (Hint: take a look at the .toString() method)
 var resSix = 5;
-while (resSix.toString().length < 5) {
-  resSix += 23;
-}
+  while (resSix.toString().length < 5) {
+    resSix += 23;
+  }
 
 // Replace This Comment With Your Code
 
 // 7. Write a `while` loop that increases `resSeven` by 12 when it's strictly
 //    below 95, decreases it by 7 when it's strictly above 105, and stops as
 //    soon as `resSeven` equals or falls between those two values.
-var resSeven;
+var resSeven = 5;
+  while (resSeven < 95 || resSeven > 105) {
+    if (resSeven < 95) {
+      resSeven += 12;
+    } 
+    else if (resSeven > 105) {
+      resSeven -= 7;
+    }
+  }
+
 // Replace This Comment With Your Code
 
 // 8. Write a `for` loop that counts from 0 (inclusive) to 1857 (exclusive) and
