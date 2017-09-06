@@ -83,7 +83,23 @@ var taskTracker = {
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
+// 2. Photo Sharing App - In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
+
+var photoShare = {
+    username: "ebhinch", 
+    caption: "The beach is so fun!",
+    albumName: "Beach Trip 2017"
+}
+
+// This app will need users to create a username in order to own their account. Additionally, users will want to create captions for their images and photo albums (with names) in which to store like images.
+
+var picShare = {
+    url: "www.picShare.com",
+    date: "Monday, July 3, 2017",
+    albumCollection: "a set of all albums uploaded to PicShare"
+}
+
+// This app will require the date on which photos were uploaded, a URL where photos may be viewed, and an album collection where other users can view past photo albums. 
 
 ### 3. Home Automation Manager
 
@@ -92,7 +108,22 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
+// 3. Home Automation Manager - This app will be a tool for managing a home automation system; it will keep track of the time and temperature of the house that it monitors, and use that information to turn on and off different lights and adjust the thermostat up and down.
+
+var automationSystem = {
+    onButton: "on",
+    emergencyAlarm: "This alarm will sound and contact police department in event of emergency",
+    alarmVolume: "loud",
+    password: "1234"
+}
+
+var homeAutomation = {
+    temperature: "71*",
+    homeBrightness: "dim",
+    temperatureButtons: "these buttons will turn temperature up and down"
+}
+
+// A home automation system will need buttons to allow the user to increase or decrease home temperature, change light brightness, enter passcode, and many other things. It will also need a passcode, so the homeowner can turn the system on and off, an emergency alarm, emergency alarm value, etc., so it can best protect and automate the home. 
 
 ### 4. Sneaker Store
 
@@ -100,7 +131,21 @@ This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
-> Answer here
+// 4. Sneaker Store - This app will allow customers to browse a list of products (sneakers, in this case), add those products to a cart, and save that cart as a past order once the purchase is complete.
+
+var sneakerStore = {
+    style: "fitness",
+    price: 55,
+    size: 8
+}
+
+var sneakerShop = {
+    sneakerSole: "rubber",
+    sneakerColor: "blue",
+    orderQuantity: 2 
+}
+
+// This shop, among other things, will want to allow users to sort by style, price, size, material and color. Additionally, users will need to specify the quantity they wish to buy before they can place an order.
 
 ## Representing Abstractions in Code
 
@@ -156,7 +201,9 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+// 5. Subway System 
+// DISADVANTAGE - This app's main purpose is dictated as being able to tell travelers "how many stops they need to travel to get from one station to another, " but nowhere in this code is that made clear. It would be nice to add a stopCountdown to make abundantly clear how many stops riders will be on the train before they need to get off. 
+// ADVANTAGE - The rail lines show what stations they hit, orienting riders and letting them know which stations they'll be traveling through first. 
 
 ### 6. Doctor Appointment App
 
@@ -259,7 +306,11 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
+// 6. Doctor Appointment App
+// OPTION 1 - Option 1 reads more like the physician's schedule, showing appointments nested within each physician's profile. This would likely appeal to a physician but feels confusing to me, since I'm reading it from the perspective of someone who relates to being a patient more than a doctor. 
+// OPTION 2 - Option 2 feels easier to read and less clunky with code. This makes it appeal to me more than Option 1 even more than the fact that it's more patient-oriented. 
+//CONCLUSION - It seems to me that depending on how you're reading these files and how you're needing to filter infomration down, Option 1 would appeal to the practice or physician and Option 2 would appeal more to the patient. 
+
 
 ## Tying It Together
 
@@ -269,14 +320,23 @@ You've been tasked with building an in-browser tic-tac-toe game.
 
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
-
-  > Answer here
+    
+    // 7a. What are some possible entities that your application might use to model its data? Please pick at least two, with at least two properties apiece. 
+    // X / O player graphics 
+    // Usernames - so players can see who they are playing 
 
 b.  How might those entities be represented in JavaScript code?
 
-  > Answer here
+// 7b. How might those entities be represented in JavaScript code?
+    document.getElementById("oGraphic").src = "http://www.imgur.com/oGraphic.jpg";
+    document.getElementById('xGraphic').src = "httP://www.imgur.com/xGraphic.jpg";
+    var playerA = "Sam";
+    var playerB = "Sarah";
 
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
-  > Answer here
+//7c. I chose the X and O graphics and usernames because they seem like the fundamentals of the game. In order to play, you'd need to have your playing graphic as well as know who you are playing against. I represented the usernames as players A and B and the images as though they'd been taken from Imgur because there are techniques I've used in the past. 
+
+
+
