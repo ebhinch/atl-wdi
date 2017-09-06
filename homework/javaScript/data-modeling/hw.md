@@ -60,7 +60,24 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
+// 1. To-Do List - This app will be an app for tracking and managing tasks. Not only will it keep track of whether tasks have been completed, it will also keep track of how long each task took to complete. Tasks can be grouped into 'projects' to keep them organized.
+
+
+var taskManager = {
+    name: "Task Manager",
+    calendar: "Today is Tuesday, September 5, 2017",
+    deadline: "Wednesday, September 7, 2017, at 9 a.m."
+}
+// This app will need a name, a calendar showcasing the current date and showing when tasks are due, and the capacity for the user to create deadlines. ALSO please note, I'm only including one example value in each key in an effort to avoid styling errors.
+
+
+var taskTracker = {
+    finalDeadline: "Friday, September 9, 2017, at 5 p.m.",
+    subDeadlines: "Wednesday, September 7, 2017, at 9 a.m.",
+    statusUpdate: "Sections 1 through 5 completed!"
+}
+
+// This app will need a way for users to track their final deadlines as well as mini deadlines / checkpoints, intended to keep user on track. Lastly, they'll need an ability to enter status updates as subdeadlines are met.
 
 ### 2. Photo Sharing App
 

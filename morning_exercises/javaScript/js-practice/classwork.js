@@ -68,6 +68,10 @@ for (var i = 0; i < 1000; i++) {
   }
 }
 
+var erica;
+erica = 98;
+erica.length;
+
 
 
 // 10. For numbers 1-10, calculate n^n and then store the sum of all of these values in the variable `resTen`.
