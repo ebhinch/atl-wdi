@@ -50,7 +50,7 @@ var allGreaterThanTen = function(numsArray){
 // Output: an array of all words from the first array with five or more letters
 var wordsWithAtLeastFiveLetters = function(words){
   var newArray = [];
-  for (var i = 0; i < words.length; i ++){
+  for (var = i; i < words.length; i ++){
     if (words.length >= 5){
       newArray.push(words[i]);
     }
@@ -64,7 +64,7 @@ var wordsWithAtLeastFiveLetters = function(words){
 //          `false` otherwise
 // Edge Case: If the array is empty, the function should return `true`.
 var allStartingWithA = function(words){
-  for (var i = 0; i < words.length; i++) {
+  for (var = i; i < words.length; i++) {
     if (words.charAt(0) === 'a' || words.charAt(0) === "A") {
       return true;
     }
@@ -78,7 +78,7 @@ var allStartingWithA = function(words){
 //          (case-insensitive), `false` otherwise
 var anyStartingWithB = function(words){
   for (var i = 0; i<words.length; i ++) {
-    if (words.charAt(0) === 'b' || words.charAt(0) === 'B' ){
+    if (words.charAt(0) === 'b' || words.charAt(0) === 'B' {
       return true;
     }
     else return false;
@@ -96,13 +96,8 @@ var hasAtLeastNVowels = function(word, n){
     return null;
   }
   for (var i = 0; i<word.length; i++) {
-    if (word.charAt(i) === 'a' || word.charAt(i) === 'A' ||
-      word.charAt(i) === 'e' || word.charAt(i) === 'E' ||
-      word.charAt(i) === 'i' || word.charAt(i) === 'I' ||
-      word.charAt(i) === 'o' || word.charAt(i) === 'O' ||
-      word.charAt(i) === 'u' || word.charAt(i) === 'U'
-    ) {
-    return true;
+    if (word.charAt(i)) === 'a' || word.charAt(i) === 'A' || word.charAt(i) === 'e' || word.charAt(i) === 'E' || word.charAt(i) === 'i' || word.charAt(i) === "I" || word.charAt(i) === 'o' || word.charAt(i) === 'O' || word.charAt(i) === 'u' || word.charAt(i) === 'U') {
+      return true;
 }
     else return false;
   }
@@ -113,27 +108,19 @@ var hasAtLeastNVowels = function(word, n){
 // Input: an array of words
 // Output: an array of words from the original array that have at least two
 //          vowels
-var wordsWithAtLeastTwoVowels = function(words) {
+var wordsWithAtLeastTwoVowels = function(words){
   var newArray = [];
   for (var i = 0; i < words.length; i++) {
-    if (hasAtLeastNVowels(words[i], 2)) {
-      results.push(words[i]);
-    }
+    if 
   }
-  return newArray;
+};
 
 // #9
 // Input: an array of words
 // Output: `true` if ALL words have two or more vowels, `false` otherwise
 // Edge Case: If the array is empty, the function should return `true`.
 var allHaveAtLeastTwoVowels = function(words){
-  var newArray = [];
-  for (var i = 0; i < words.length; i++){
-    if (!hasAtLeastNVowels(words[i], 2)) {
-      return false;
-    }
-    else return true;
-  }
+  // Your Code Here
 };
 
 // #10
@@ -141,14 +128,7 @@ var allHaveAtLeastTwoVowels = function(words){
 // Output: `true` if there are ANY words have two or more vowels,
 //          `false` otherwise.
 var anyHaveAtLeastTwoVowels = function(words){
-  var newArray = [];
-  for (var i = 0; i < words.length; i++){
-    if (hasAtLeastNVowels(words[i],2)) {
-      return true;
-    }
-    else return false;
-  }
-
+  // Your Code Here
 };
 
 // #11
@@ -157,16 +137,7 @@ var anyHaveAtLeastTwoVowels = function(words){
 //          `false` otherwise
 // Edge Case: If the array is empty, the function should return `true`.
 var noneHaveTwoOrMoreVowels = function(words){
-  var newArray = [];
-  for (var i = 0; i < words.length; i++){
-    if (!hasAtLeastNVowels(words[i])) {
-      return false;
-    }
-    else if (hasAtLeastNVowels(words[i], 1)) {
-      return false;
-    }
-    else return true;
-  }
+  // Your Code Here
 };
 
 // #12
@@ -176,14 +147,8 @@ var noneHaveTwoOrMoreVowels = function(words){
 // e.g. given ['cat', 'horse', 'elephant'],
 //      return { cat: 3, horse: 5, elephant: 8}
 var buildObjectFromWords = function(words){
-  var a = {};
-  for (var i = 0; i < words.length; i++){
-    a[words[i] + ": " + words[i].length + ","]
-  }
-  return a;
+  // Your Code Here
 };
-
-
 
 
 /// DO NOT EDIT BELOW THIS LINE ///
@@ -202,4 +167,3 @@ module.exports = {
   buildObjectFromWords: buildObjectFromWords
 }
 
- 

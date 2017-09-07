@@ -15,11 +15,13 @@
 
 
 
-window.onload = function() {
+window.onload = function () {
+
   var body = document.body;
   var ring1 = document.querySelector('.ring-1');
   var ring2 = document.querySelector('.ring-2');
   var ring3 = document.querySelector('.ring-3');
+
 
   body.addEventListener('click', bullseyeGame.miss);
   ring1.addEventListener('click', bullseyeGame.outerRing)
@@ -29,14 +31,14 @@ window.onload = function() {
 var bullseyeGame = {
   score: 0,
 
-  updateScore: function(points) {
+  updateScore: function (points) {
     var scoreElement = document.querySelector('.score');
     this.score += points
 
     scoreElement.innerHTML = `${this.score} points`
   },
 
-  miss: function(event) {
+  miss: function (event) {
     event.stopPropagation();
     alert('YOU MISSED');
 
@@ -44,7 +46,7 @@ var bullseyeGame = {
     // [ALERT:] needs to be bullseyeGame because this in clickEvents refers to the html element that was clicked
   },
 
-  outerRing: function(event) {
+  outerRing: function (event) {
     event.stopPropagation();
     alert('outerRing was clicked')
   }
