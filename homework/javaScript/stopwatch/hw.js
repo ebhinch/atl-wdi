@@ -115,15 +115,15 @@ const ViewHelpers = {
   //zeroFill pads a number with zeros to change "1" to "0001", etc
   zeroFill: function(number, length){
     // change numbers to strings so you can get length
-    let str = number.toString();
+    let lengthString = number.toString();
 
-    let numZeroes = Math.max(length - str.length, 0);
+    let numZeroes = Math.max(length - lengthString.length, 0);
     //create for loop to add 0
-    for (let i = 0; i < (length - str.length); i++) {
+    for (let i = 0; i < (length - lengthString.length); i++) {
       // adds a 0 
-      str = "0" + str;
+    lengthString = "0" + lengthString;
     } 
-      return str;
+      return lengthString;
   },
 };
 
@@ -145,18 +145,6 @@ const AppController = {
    }
   },
 
-    //stops clock when running
-    handleClickStopReset: function() {
-      if (Stopwatch.isRunning = true) {
-        Stopwatch.stop();
-      }
-      else {
-        Stopwatch.reset();
-        ViewEngine.updateTimeDisplay(0, 0, 0);
-        ViewEngine.updateLapListDisplay(Stopwatch.laps);
-      }
-    },
-
   handleClickLap: function(){
     if (Stopwatch.isRunning = true) {
       Stopwatch.lap();
@@ -164,17 +152,36 @@ const AppController = {
     }
   },
 
-
+    //stops clock when running
+    handleClickStopReset: function() {
+      if (Stopwatch.isRunning = true) {
+        Stopwatch.stop();
+      }
+      //if not running, update
+      else {
+        Stopwatch.reset();
+        ViewEngine.updateTimeDisplay(0, 0, 0);
+        ViewEngine.updateLapListDisplay(Stopwatch.laps);
+      }
+    },
 };
 
 window.onload = function(){
   // Attach AppController methods to the DOM as event handlers here.
-  document.getElementById("start").onClick = AppController.handleClickStart;
-  //$("#start").onClick = AppController.handleClickStart;
+    
+  $("#start").onClick = AppController.handleClickStart;
 
   $("#stop").onClick = AppController.handleClickStopReset;
   $("#lap").onClick = AppController.handleClickLap;
 
+    // document.getElementById("start").onClick = AppController.handleClickStart;
+
+    // document.getElementById("lap").onClick = AppController.handleClickLap;
+
+    // document.getElementById("stop").onClick = AppController.handleClickStopReset;
+
+
   }
   
 }};
+
