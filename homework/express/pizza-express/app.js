@@ -1,5 +1,8 @@
 const express = require("express");
 const app = express();
+const hbs = require("hbs");
+app.set("view engine", "hbs");
+app.set("views", "./views");
 
 app.get("/", (req, res) => {
     console.log(req.query);
