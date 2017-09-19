@@ -5,11 +5,14 @@ const toppingController = require("./controllers/topping.js");
 const orderController = require ("./controllers/order.js");
 const notfoundController = require("./controllers/notfound.js");
 
+
+
 app.set("view engine", "hbs");
 app.set("views", "./views");
 
 app.use("/topping", toppingController);
 app.use("/order", orderController);
+app.use(express.static(__dirname + '/public')); 
 
 
 app.get("/", (req, res) => {
