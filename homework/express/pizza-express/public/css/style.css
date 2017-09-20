@@ -1,5 +1,6 @@
 body {
-    color: orange;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-
+    color: black;
+    font-size: 36px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(https://i.pinimg.com/originals/36/10/06/3610062ed612bf558fc08ed252fe6241.jpg);
 }
