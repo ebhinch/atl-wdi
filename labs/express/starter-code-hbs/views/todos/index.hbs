@@ -4,8 +4,13 @@
     <li>Description: {{description}}</li>
     <li>Urgent: {{urgent}}</li>
     <br>
+    <form action="/todos/{{@index}}">
+      <input type="submit" value="DELETE"/>
+    </form>
   {{/each}}
 </ul>
 
 
 <a href="/todos/new">Create a todo</a>
+
+

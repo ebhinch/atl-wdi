@@ -6,11 +6,12 @@ const pirates = require('../models/pirates.js');
 //all routes for /pirate
 //INDEX
 router.get("/", (req, res) => {
+    const id = parseInt(req.params.id);
        res.render("pirates/index", {
            pirates: pirates
-       })
+       });
 
-})
+});
 
 //NEW
 router.get("/new", (req, res) => {
@@ -20,7 +21,10 @@ router.get("/new", (req, res) => {
 //SHOW
 router.get("/:id", (req, res) => {
     const id = parseInt(req.params.id);
-    res.render("pirates/show");
+    const pirate = pirates[id];
+    res.render("pirates/show", {
+        pirate: pirate
+    });
 
 })
 
@@ -28,8 +32,8 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
     const newPirate = req.body;
     pirates.push(newPirate);
+    res.redirect("/pirates");    
     res.send("successfully created a pirate");
-    res.redirect("/pirates");
 
 });
 

@@ -5,12 +5,18 @@
 
 <ul>
   {{#each pirates}}
+    <li><a href = "./pirates/{{@index}}">{{name}}</a></li>
+
+
+
+
+{{!--   
     <li>Name: {{name}}</li>
     <li>Birthplace: {{birthplace}}</li>
     <li>Death Year: {{death_year}}</li>
     <li>Base: {{base}}</li>
     <li>Nickname: {{nickname}}</li>
-    <br>
+    <br> --}}
   {{/each}}
 </ul>
 
