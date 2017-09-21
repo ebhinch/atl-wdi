@@ -7,7 +7,7 @@ const pirates = require('../models/pirates.js');
 //INDEX
 router.get("/", (req, res) => {
        res.render("pirates/index", {
-           pirates: pirates.pirateArray
+           pirates: pirates
        })
 
 })
@@ -20,7 +20,6 @@ router.get("/new", (req, res) => {
 //SHOW
 router.get("/:id", (req, res) => {
     const id = parseInt(req.params.id);
-    const pirate = pirates.pirateArray[id];
     res.render("pirates/show");
 
 })

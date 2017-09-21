@@ -1,5 +1,4 @@
-module.exports = {
-	pirateArray: [
+module.exports = [
 	{
 	  name: 'Anne Bonny',
 	  birthplace: 'Kinsale, Ireland',
@@ -91,4 +90,4 @@ module.exports = {
     base: "England",
 	  nickname: "Captain Kidd"
 	}
-]};
+];
