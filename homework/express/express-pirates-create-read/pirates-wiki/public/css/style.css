@@ -1,0 +1,24 @@
+body {
+    font-family: fantasy;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQsod9FiB1_TTaH6FaVq7GVl16YPsGizbfB9-r0G-pLSNJU2Dn");
+    background-repeat: repeat-y;
+    opacity: .5;
+    background-size: 100%;
+    font-weight: bolder;
+}
+
+a {
+    color: blue;
+    font-size: 28px;
+}
+
+li {
+    font-size: 24px;
+    color: black;
+}
+
+h2 {
+    text-transform: capitalize;
+    letter-spacing: 2pt;
+    color: navy;
+}

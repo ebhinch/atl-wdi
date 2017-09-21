@@ -1,0 +1,9 @@
+<h1>This is an individual todo!</h1>
+
+{{!-- in handlebars, open helpers with "#" and close with "/" --}}
+{{#if error }}
+    <h1>{{error}}</h1>
+{{/if}}
+
+<h1> {{ todo.description }} </h1>
+<h3> {{ todo.urgent }} </h3>
