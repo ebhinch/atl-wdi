@@ -10,6 +10,7 @@ router.get("/", (req, res) => {
        res.render("pirates/index", {
            pirates: pirates
        });
+  
 
 });
 
@@ -34,8 +35,47 @@ router.post("/", (req, res) => {
     pirates.push(newPirate);
     res.redirect("/pirates");    
     res.send("successfully created a pirate");
-
 });
+
+//EDIT
+router.get("/:id/edit", (req, res) => {
+    res.render("pirates/edit", {
+        pirates: {
+            id: req.params.id,
+            name: pirates[req.params.id].name,
+            birthplace: pirates[req.params.id].birthplace,
+            death_year: pirates[req.params.id].death_year,
+            base: pirates[req.params.id].base,
+            nickname: pirates[req.params.id].nickname,
+        }
+    });
+    
+})
+
+//UPDATE
+router.put("/:id", (req, res) => {
+    const pirateToEdit = pirates[req.params.id];
+    
+    pirateToEdit.name = req.body.name;
+    pirateToEdit.birthplace = req.body.birthplace;
+    pirateToEdit.death_year = req.body.death_year;
+    pirateToEdit.base = req.body.base;
+    pirateToEdit.nickname = req.body.nickname;
+
+    res.redirect("/pirates");
+});
+
+
+//DELETE
+router.delete("/:id", (req, res) => {
+    pirates.splice(req.params.id, 1);
+    res.redirect("/pirates");
+});
+
+
+
 
 //exports
 module.exports = router;
+
+
