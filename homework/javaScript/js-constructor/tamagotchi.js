@@ -12,14 +12,15 @@ class Tamagotchi {
 }
     cry(){
         this.foodInTummy --
-        console.log(this.foodInTummy);
-        console.log("WAHH!!!");
+        console.log("WAHH! " + this.name + "'s food level is " + this.foodInTummy); 
+       
         return this;
     }
 
     puke() {
         this.foodInTummy --
-        console.log(this.foodInTummy + " WAHH!!!! I'M SICK");
+        console.log("WAHH! I'm sick and my food level is " + this.foodInTummy);
+
         return this;
     }
 
@@ -27,6 +28,28 @@ class Tamagotchi {
         this.restedness --
         console.log(this.name + " has current restedness of: " + this.restedness);
         return this;
+    }
+
+    start () {
+        let me = this;
+        console.log("start" + this.name)
+        this.hungerTimer = setInterval(function() {
+            me.cry();
+        }, 6000);
+        this.yawnTimer = setInterval(function() {
+            me.yawn();
+        }, 10000);
+        this.sickTimer = setInterval(function() {
+            me.puke();
+        }, 20000);
+           
+    }
+    
+    stop(){
+        clearInterval(this.hungerTimer);
+        clearInterval(this.yawnTimer);
+        clearInterval(this.sickTimer);
+        console.log("The timer for " + this.name + " has stopped.")
     }
 }
 
@@ -57,5 +80,18 @@ const blue = new Tamagotchi("blue", "bird");
 // console.log(olive.puke().yawn());
 // console.log(blue.puke().yawn());
 
+//PART FIVE - START AND STOP
+const yellow = new Tamagotchi("yellow", "iguana");
+const pooh = new Tamagotchi("pooh", "bear");
+
+console.log(yellow.cry());
+console.log(pooh.yawn());
+console.log(yellow.puke());
 
 
+console.log(yellow.start());
+console.log(blue.start());
+// console.log(yellow.stop());
+console.log(pooh.start());
+// console.log(blue.stop());
+// console.log(pooh.stop());
