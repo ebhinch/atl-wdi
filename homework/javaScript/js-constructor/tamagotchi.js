@@ -14,37 +14,48 @@ class Tamagotchi {
         this.foodInTummy --
         console.log(this.foodInTummy);
         console.log("WAHH!!!");
+        return this;
     }
 
     puke() {
         this.foodInTummy --
         console.log(this.foodInTummy + " WAHH!!!! I'M SICK");
+        return this;
     }
 
     yawn(){
         this.restedness --
-        console.log(this.name + " has current restedness of: " + this.restedness)
+        console.log(this.name + " has current restedness of: " + this.restedness);
+        return this;
     }
 }
 
+
+//PART ONE - CREATE CONSTRUCTOR FUNCTION
 //create new Tamagotchis
-// const tommy = new Tamagotchi();
-// const sam = new Tamagotchi();
+const tommy = new Tamagotchi();
+const sam = new Tamagotchi();
+
 
 // console.log(tommy.cry());
 // console.log(sam.cry());
 
-// const fluffykins = new Tamagotchi("fluffykins", "bunny");
-// const fido = new Tamagotchi("fido", "dog");
+//PART TWO - ADD ARGUMENTS
+const fluffykins = new Tamagotchi("fluffykins", "bunny");
+const fido = new Tamagotchi("fido", "dog");
 // console.log(fluffykins.cry());
 // console.log(fido.cry());
 
+
+//PART THREE - MORE METHODS
 const olive = new Tamagotchi("olive", "dog");
 const blue = new Tamagotchi("blue", "bird");
-console.log(olive.yawn());
-console.log(blue.puke());
+// console.log(olive.yawn());
+// console.log(blue.puke());
 
+//PART THREE with chained methods
+// console.log(olive.puke().yawn());
+// console.log(blue.puke().yawn());
 
-//test out your Tamagotchies below via console.logs
 
 
