@@ -16,6 +16,15 @@ class Tamagotchi {
         console.log("WAHH!!!");
     }
 
+    puke() {
+        this.foodInTummy --
+        console.log(this.foodInTummy + " WAHH!!!! I'M SICK");
+    }
+
+    yawn(){
+        this.restedness --
+        console.log(this.name + " has current restedness of: " + this.restedness)
+    }
 }
 
 //create new Tamagotchis
@@ -25,10 +34,15 @@ class Tamagotchi {
 // console.log(tommy.cry());
 // console.log(sam.cry());
 
-const fluffykins = new Tamagotchi("fluffykins", "bunny");
-const fido = new Tamagotchi("fido", "dog");
-console.log(fluffykins.cry());
-console.log(fido.cry());
+// const fluffykins = new Tamagotchi("fluffykins", "bunny");
+// const fido = new Tamagotchi("fido", "dog");
+// console.log(fluffykins.cry());
+// console.log(fido.cry());
+
+const olive = new Tamagotchi("olive", "dog");
+const blue = new Tamagotchi("blue", "bird");
+console.log(olive.yawn());
+console.log(blue.puke());
 
 
 //test out your Tamagotchies below via console.logs
