@@ -30,7 +30,48 @@ entities/abstractions (e.g. Senior Paws app, above) that the app might use, and 
 This app provides easy access to all your e-mail service providers in one app. The app will let you select one of your email addresses and view your e-mails for that address.
 
 ```
-Write your answer here or in a separate js file.
+PART 1:
+Accounts: username, password, provider, account name, inbox (received emails)
+
+PART 2:
+
+const InboxSchema = new Schema({
+  sender: String,
+  subjectLine: String
+});
+
+const AccountSchema = new Schema({
+    username: {
+      type: String,
+      required: true
+    },
+    password: {
+      type: String,
+      required: true
+    },
+    provider: {
+      type: String,
+      required: true
+    },
+    inbox: [InboxSchema]
+});
+
+PART 3:
+
+const exampleAccount = {
+  username: "ebhinch",
+  password: "password",
+  provider: "gmail",
+  inbox: [{
+    sender: "joeshmo",
+    subjectLine: "dinner friday night"
+  },
+  {sender: "yourmom",
+  subjectLine: "your birthday"
+  }]
+}
+
+
 ```
 
 ### 2. Radio on the Internet app
@@ -39,7 +80,46 @@ This app hosts a ton of radio stations, each featuring their own playlists of so
 
 
 ```
-Write your answer here or in a separate js file.
+PART 1:
+Station: name, genre, popularity score, playlist
+
+PART 2:
+const PlaylistSchema = new Schema({
+  songName: String,
+  artist: String,
+  length: Number
+})
+
+const StationSchema = new Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  genre: {
+    type: String,
+    required: true
+  },
+  popularityScore: Number,
+  playlist: [PlaylistSchema]
+});
+
+PART 3:
+const exampleStation = {
+  name: "Pop of the Nineties",
+  genre: "pop",
+  popularityScore: 9,
+  playlist: [{
+    songName: "Black Baloon",
+    artist: "Goo Goo Dolls",
+    length: 180
+  },
+  {
+    songName: "All Star",
+    artist: "Smash Mouth",
+    length: 200
+  }]
+}
+
 ```
 
 ### 3. Rock Concert App
@@ -47,28 +127,171 @@ Write your answer here or in a separate js file.
 This app will be a tool for managing all of your favorite bands' concerts; it will keep track of their tour dates, ticket purchasing, and next recommended show.
 
 ```
-Write your answer here or in a separate js file.
+PART 1:
+App: artists, dates, locations, ticket price, recommended shows
+
+PART 2:
+
+const RecommendedSchema = ({
+  artist: String,
+  date: Number,
+  location: String
+})
+
+const ShowSchema = new Schema({
+  artist: String,
+  date: Number,
+  location: String,
+  ticketPrice: Number,
+  recommendedShows: [RecommendedSchema]
+})
+
+PART 3:
+const exampleApp = {
+  artist: "Nickel Creek",
+  date: 10052017,
+  location: "Asheville",
+  ticketPrice: 75,
+  recommendedShows: [{
+    artist: "Punch Brothers",
+    date: 11032017,
+    location: "Atlanta"
+  }, {
+    artist: "Iron and Wine",
+    date: 01112018,
+    location: "Birmingham"
+  }]
+}
+
 ```
 
 ### 4. Coffee To-Go App
 
 This app will allow customers to browse a list of coffeeshops nearby, order drinks off of their menu, add those drinks to a shopping cart, and save that cart as a past order once the purchase is complete.
 
+PART 1: 
+Coffee Shops: name, address, menu, past orders
+
+PART 2:
+
+const PastOrderSchema = new Schema({
+  menuItem: String,
+  date: Number
+})
+
+const MenuSchema = new Schema({
+  menuItem: String,
+  price: Number
+})
+
+const CoffeeShopSchemaApp = new Schema({
+  shopName: String,
+  address: String,
+  menu: [MenuSchema],
+  pastOrders: [PastOrderSchema]
+})
+
+PART 3:
+const exampleCoffeeShopApp = {
+  shopName: "Octane",
+  address: "123 Coffee Shop Lane",
+  menu: [{
+    menuItem: "cafe au lait",
+    price: 3,
+  },
+    menuItem: "latte",
+    price: 3.5
+  },
+    menuItem: "cold brew",
+    price: 2.5
+  ]
+},
+  pastOrders: [{
+    menuItem: "cafe au lait",
+    date: 09012017
+  },
+  {
+    menuItem: "cold brew",
+    date: 07112017
+  }
+    ]
+
 ### 5. Team Tracker App
 
 This app shows you all the latest stats from your favorite sports teams. You can view individual player stats and full team stats.
 
 ```
-Write your answer here or in a separate js file.
+PART 1:
+App: team name, player name, player stats, username, team stats...
+
+PART 2:
+const TeamStats = new Schema({
+  wins: Number,
+  losses: Number,
+  record: Number
+})
+
+const PlayerStats = new Schema({
+  playerName: String,
+  pointsScored: Number,
+  mistakesMade: Number
+})
+
+const Players = new Schema({
+  playerName: String,
+  teamName: String
+})
+
+const TeamTrackerApp = new Schema({
+  username: String,
+  teamName: String,
+  sport: String,
+  teamStats: [TeamStats],
+  playerStats: [PlayerStats],
+  playerName: [Players]
+})
+
+PART 3:
+const exampleTeamApp = {
+  username: "ebhinch",
+  teamName: "Giants",
+  sport: "Football",
+  teamStats: [{
+    wins: 5,
+    losses: 2,
+    record: .7
+  }],
+  playerStats: [{
+    playerName: "Sam Jones",
+    pointsScored: 40,
+    mistakesMade: 3
+  },
+  {
+    playerName: "Matt Thomas",
+    pointsScored: 7,
+    mistakesMade: 5
+  }]
+  player: [{
+    playerName: "Bob Marley",
+    teamName: "Giants"
+  },
+  {
+    playerName: "Santa Clause",
+    teamName: "Giants"
+  }]
+
+}
+
 ```
 
 
 ### Final Thoughts:
 
 Q. When you were creating relationships between the models, what were some thoughts or questions you had to help guide a connection between them?
+I thought about what of the criteria I was listing would have more than one element and made those into arrays. 
 
 ```
-Write your answer here or in a separate js file.
+I thought about what of the criteria I was listing would have more than one element and made those into arrays. 
 ```
 
 ### Reading and Videos for Tomorrow
