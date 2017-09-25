@@ -95,7 +95,7 @@ kitchen.addToMenu(newBurger)
 
 const customers = [
   {
-    name: "Josie",
+    name: "Josie", 
     order: "Holy Guacamole"
   }, {
     name: "Chris",
@@ -111,13 +111,17 @@ const customers = [
 
 // CODE FOR QUESTION 6 HERE
 
-customers.order
 
 
-kitchen.order("HELL'S FURY")
-.then((name) => {
-  console.log(name);
+Promise.all(customers);
+
+
+kitchen.readMenu()
+.then((menu) => {
+  console.log("all food ordered");
 })
+
 .catch((error) => {
-  console.log(error)
+  console.log(error);
 })
+
