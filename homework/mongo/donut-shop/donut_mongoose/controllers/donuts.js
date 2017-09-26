@@ -5,7 +5,7 @@
 const express = require('express');
 const mongoose = require("mongoose");
 const router = express.Router();
-const Schema = require("../db/schema.js");
+const Schema = require("../models/donuts.js");
 
 //======================
 // INDEX
