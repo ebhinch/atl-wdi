@@ -2,13 +2,18 @@
 // REQUIREMENTS
 //======================
 // require express, mongoose, body-parser, method-override
-var express = require("express");
-var app = express();
-var mongoose = require("mongoose");
-var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
-var hbs = require("hbs");
-var logger = require('morgan');
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const methodOverride = require("method-override");
+const hbs = require("hbs");
+const logger = require('morgan');
+
+const app = express();
+
+mongoose.connect('mongodb://localhost/donut_store');
+
+
 
 
 //======================
@@ -40,6 +45,11 @@ app.use('/', donutsController);
 // LISTENERS
 //======================
 //CONNECT MONGOOSE TO "donut_store"
+const db = mongoose.connection;
 
 
 //CREATE THE MONGOOSE CONNECTION and SET APP TO LISTEN to 3000
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Express started on ${port}`)
+})
