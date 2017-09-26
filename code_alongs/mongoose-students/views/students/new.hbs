@@ -1,0 +1,16 @@
+{{!-- this corresponds with a "Get route" but has a "post" method --}}
+{{!-- "post" is the default method. you can change that with method override. if you don't explicitly say "post" it'll default to it but you sould include it anyhow--}}
+
+{{!-- you must label inputs exactly the same way you labeled them in your schema --}}
+
+<form action="/students" method="POST">
+    
+    <label for="name">Name:</label>
+    <input type="text" name="name">
+
+    <label for="age">Age:</label>
+    <input type="number" name="age">
+
+    <button type="submit">Create</form>
+
+</form>

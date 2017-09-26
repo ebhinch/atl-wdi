@@ -1,10 +1,17 @@
- <h4>Students in this class are:</h4>
+<div>
 
-{{#each students}}
-    <div>
-        <span>Student ID: {{this._id}}</span>
-        <strong>{{this.name}}</strong> 
-        <span>{{this.age}}</span>
-    </div>
-{{/each}}
+    <h4>The students in this class are:</h4>
 
+    {{#each students}}
+        <div>
+            <span>Student ID: {{this._id}}</span>
+            <strong>Name: {{this.name}}</strong> 
+            <span>Age: {{this.age}}</span>
+            <a rel="" href="/students/{{this.id}}">View Student</a>
+        </div>
+    {{/each}}
+
+    {{!-- this is purely a link, it doesn't change any information or bring different information up based a specific student, so this is all you need --}}
+    <a href="/students/new">Add a New Student</a>
+
+</div>

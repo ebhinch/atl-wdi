@@ -1,0 +1,17 @@
+{{!-- now we need method override because we really want to make a PUT request which requires overriding POST --}}
+{{!-- we need to install method override from command line --}}
+{{!-- next line tells method override, instead of using default (post), use put --}}
+
+<form action="/students/{{student._id}}?_method=PUT" method="POST">
+
+    <h2>Edit a Student's Information</h2>
+    
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="{{student.name}}">
+
+    <label for="age">Age:</label>
+    <input type="number" name="age" value="{{student.age}}">
+
+    <button type="submit">Edit {{student.name}}</form>
+
+</form>
