@@ -96,7 +96,7 @@ router.get("/:id/delete", (request, response) => {
     //will return a promise
     .then((student) => {
 
-        //THEN redirect back to the Stude nts INDEX to show all the remaining students
+        //THEN redirect back to the Students INDEX to show all the remaining students
         response.redirect("/students")
     })
 

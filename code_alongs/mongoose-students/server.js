@@ -46,7 +46,10 @@ db.once('open', function () {
 const studentsController = require('./controllers/students_controller');
 app.use('/students', studentsController);
 
-
+// add in projects controller - this will be used for projects (embedded documents)
+const projectsController = require("./controllers/projects_controller");
+// "projects" only exists within "students" so below is the file path
+app.use("/students/:studentId/projects", projectsController);
 
 const port = 3000;
 app.listen(port, () => {
