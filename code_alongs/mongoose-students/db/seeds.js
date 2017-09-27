@@ -61,3 +61,4 @@ students.forEach(function (student, i) {
 
 // Disconnect from database
 db.close();
+
