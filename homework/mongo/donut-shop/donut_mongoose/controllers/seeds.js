@@ -3,6 +3,7 @@
 //======================
 //require express, mongoose, Donut schema, user
 var express = require("express");
+//when you export the router, you're bringing in middleware, so we can use 
 var router = express.Router();
 var mongoose = require("mongoose");
 var Donut = require("../models/donuts.js");
