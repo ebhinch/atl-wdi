@@ -14,15 +14,12 @@ const DonutModel = Schema.DonutModel
 //======================
 // Create a GET index route "/" that sends all donuts to index.hbs
 router.get("/", (request, response) => {
-
     DonutModel.find({})
-
         .then((donuts) => {
             response.render("donuts/index", {
                 donuts: donuts
             })
         })
-
         .catch((error) => {
             console.log(error)
         })
@@ -74,7 +71,7 @@ router.post("/", (request, response) => {
     DonutModel.create(newDonut)
     
         .then(() => {
-            response.redirect("/donuts")
+            response.redirect("/")
         })
     
         .catch((error) => {
@@ -90,7 +87,7 @@ router.post("/", (request, response) => {
 // sends that donut's data to it
 router.get("/:id/edit", (request, response) => {
     const donutId = request.params.id;
-    DonutModel.findById(studentId)
+    DonutModel.findById(donutId)
         .then((donut) => {
             response.render("donuts/edit", {
                 donut: donut
@@ -100,8 +97,6 @@ router.get("/:id/edit", (request, response) => {
             console.log(error)
         })
 })
-
-
 
 //======================
 // UPDATE
@@ -115,14 +110,12 @@ router.put("/:id", (request, response) => {
 
     DonutModel.findByIdAndUpdate(donutIdToUpdate, updatedDonut, {new: true})
         .then(() => {
-            response.redirect(`/donuts/${donutIdToUpdate}`)
+            response.redirect(`/${donutIdToUpdate}`)
         })
         .catch((error) => {
             console.log(error)
         })
 })
-
-
 
 
 //======================

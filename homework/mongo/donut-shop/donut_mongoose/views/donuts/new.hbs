@@ -1,12 +1,32 @@
 <main>
-
 	<h2>Create Your Own Donut!</h2>
 
 	<a href="/">Return to Home Page</a>
 
+
 	<div id="edit-form" class="donut-container-show">
 
-		<<<< YOUR WHOLE FORM GOES HERE >>>>
+	<form action="/" method="POST">
+		<label for="name">Name:</label>
+		<input type="text" name="name">
 
-	</div>
+		<label for="description">Description:</label>
+		<input type="text" name="description">
+
+		<label for="price">Price:</label>
+		<input type="number" name="price">
+
+		<label for="qty">Quantity:</label>
+		<input type="number" name="qty">
+
+		<button type="submit">Add Donut</button>
+	</form>
+
+</div>
+	
+
 </main>
+
+
+
+	

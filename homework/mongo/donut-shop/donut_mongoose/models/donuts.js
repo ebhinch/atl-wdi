@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 //create your donut schema:
 const Schema = mongoose.Schema;
 
+mongoose.Promise = global.Promise;
+
 const DonutSchema = new Schema({
     name: String,
     description: String,
