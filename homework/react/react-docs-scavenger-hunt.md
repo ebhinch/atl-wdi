@@ -32,6 +32,8 @@ No. You can use older syntax. You just use the "create-react-class" module inste
 8. Where can I go to check out React's built-in Accessibility features?
 This seems like a vague question, and though I've read through the Doc's now four or five times, I cannot find one resource that helps with BUILT-IN features. Below are the references I found that seem like the closest fits: 
 
+*This is the link for the Accessibility portion of the Docs: https://reactjs.org/docs/accessibility.html
+
 * Deque Systems' aXe-core automated and end-to-end accessibility tests
 
 * The Create React App has a eslint-plugin-jsx-a11y plugin that helps integrate accessibility directly into your code and has a subset of rules activated within it. 
