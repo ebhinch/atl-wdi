@@ -31,7 +31,7 @@ If you've ever written HTML strings within JavaScript, you know that the experie
 
 ## JSX
 
-JSX was created by Facebook to provide a descriptive and clean way to structure the HTML that React sends to the DOM. Before JSX, developers would render HTML through the `React.createElement()` method.
+JSX was chosen by Facebook to provide a descriptive and clean way to structure the HTML that React sends to the DOM. Before JSX, developers would render HTML through the `React.createElement()` method.
 
 ```js
 const HelloWorld = React.createElement({
@@ -80,8 +80,8 @@ Navigate to your in-class directory and run `create-react-app react-portfolio`
 ```bash
 create-react-app react-portfolio
 cd react-portfolio
-code . # or subl . or atom .
-yarn start # or npm start
+code .
+npm start
 ```
 
 We now have a basic page that allows us to get started building our portfolio.  Let's first take a deep dive into the starter code that `create-react-app` gave us. Specifically, let's look at the `App.js` file.
