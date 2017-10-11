@@ -13,7 +13,7 @@ const Movie = (props) => {
           <strong>Genre:</strong> {props.movie.Genre}
         </p>
         <p><strong>Plot: </strong>{props.movie.Plot}</p>
-        <div><strong>Poster: </strong><img src={props.movie.Poster} alt={props.movie.Title}/></div>
+        <div><img src={props.movie.Poster} alt={props.movie.Title}/></div>
         <bnr />
       </div>
     </section>
