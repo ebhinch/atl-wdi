@@ -15,10 +15,6 @@
 -- SELECT * FROM country WHERE countrycode = 'SMR';
 
 -- 5 (is it possible this and number 6 are in wrong order?)
--- ANSWER: Serra, Brazil
--- SELECT * FROM city WHERE name LIKE 'Serr%';
-
--- 6 (is it possible this and number 6 are in wrong order?)
 --ANSWER: Brasilia
 -- SELECT name FROM city WHERE id = 211;
 
@@ -28,6 +24,9 @@
 --  Bras�lia
 -- (1 row)
 
+-- 6 (is it possible this and number 6 are in wrong order?)
+-- ANSWER: Serra, Brazil
+-- SELECT * FROM city WHERE name LIKE 'Serr%';
 
 -- 7
 -- ANSWER: Santa Monica
