@@ -158,6 +158,7 @@ Within our client folder, we can run a command called `npm run build`.  This wil
 After we build the app, we need to let Express know that it needs to be aware of the new static files. Finally, we need to make a get route at the index that will serve the `index.html` of the built production React app.
 
 ```js
+// inside of server.js
 ...
   app.use(express.static(__dirname + '/client/build/'));
 ...
@@ -178,11 +179,12 @@ Let's update the `package.json` to help Heroku understand more about our app.  W
     "node": "8.6.0"
   },
 ...
+//Postinstall will install the client packages and build the minified UI in Heroku.
+
   "scripts": {
     "start": "node server.js",
     "dev": "concurrently \"nodemon server.js\" \"cd ./client  && npm start \" ",
     "test": "echo \"Error: no test specified\" && exit 1",
-    //Will install the client packages and build the minified UI in Heroku.
     "postinstall": "cd client && npm install && npm run build"
   },
 ...
@@ -667,7 +669,7 @@ Finally, let's tie this event to an individual idea.  We COULD attach that to a 
 ## You Do
 Check out the [Synthetic Event docs](https://reactjs.org/docs/events.html) and find the event that allows us to trigger the update whenever a user leaves an input.
 
-> COMMIT 
+> COMMIT
 > DEPLOY
 
 We did it! We now have an app that updates our ideas in real time.  And through using React, we built it in a scalable and easy to read way.
