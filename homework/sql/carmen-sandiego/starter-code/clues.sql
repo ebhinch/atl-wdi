@@ -57,3 +57,5 @@ SELECT name, region, population FROM country WHERE region='Southern Europe' ORDE
 
 
 -- She's in ____________________________!
+
+SELECT * FROM books WHERE title LIKE '%the%';
