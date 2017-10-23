@@ -77,6 +77,29 @@ my_first_array[2] = 3
 # Puts the class of the fourth value in myFirstArray
 puts my_first_array[4].class
 
+# Challenge 7: Hashes
+# Create a variable called myFavoriteAnimals and set it equal to a Hash with five animals. The animal name as the keys and the species as the values. You must include one animal with a name of "Edgar" and the value "Donkey"
+my_favorite_animals = {
+    :Edgar => "Donkey",
+    :Olive => "Dog",
+    :Spot => "Cow",
+    :Quackers => "Duck",
+    :Nemo => "Fish"
+}
+
+# Change value of Edgar to be "Bear"
+my_favorite_animals[:Edgar] => "Bear"
+
+# Create a variable favoriteMovie and set it equal to a new, empty Hash.
+favorite_movie = {}
+
+# Edit the favoriteMovie hash and add a movie key with a value of your choosing.
+favorite_movie[:Movie] = "St. Elmo's Fire"
+
+
+
+
+
 
 
 
