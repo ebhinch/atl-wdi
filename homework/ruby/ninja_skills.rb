@@ -96,14 +96,45 @@ favorite_movie = {}
 # Edit the favoriteMovie hash and add a movie key with a value of your choosing.
 favorite_movie[:Movie] = "St. Elmo's Fire"
 
+# Challenge 8: Ranges
 
+# Create a variable firstRange and set it equal to a Range from one to ten including ten.
+first_range = (1..10)
+# Convert firstRange to an array.
+array_first_range = first_range.to_a
+# Create a variable secondRange and set it equal to a Range from one to one thousand excluding the Number one thousand.
+second_range = (1...1000)
+# Convert secondRange to an array
+array_second_range = second_range.to_a
+# Create a For loop that changes every value in firstRange to a String and using a p statement print those values out to the terminal
+for entry in first_range do
+    entry.to_s
+    puts entry
+end
 
+# Create a variable x and set it equal to zero
+x = 0
 
+# Create a While loop that prints every value in secondRange while x < 50.
+while x < 50 do
+    puts array_second_range[x]
+    x += 1
+end
 
+# Using .each multiply every other value in firstRange by two and push those values into a new Array. Print that array to the terminal.
 
+new_first_array_range = []
 
+array_first_range.each do |location|
+    if location.odd? == true 
+        new_first_array_range.push(location * 2)
+end 
+end 
+puts new_first_array_range
 
-
-
-
-
+# Using .map and if/else statements, iterate through firstRange and change every even value to a string. If the value is odd, don't change the value to a string.
+first_range.map do |number|
+    if number.even? == true
+        number.to_s
+    end 
+end
