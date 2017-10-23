@@ -49,7 +49,7 @@ AND authors.nationality != 'United States of America';
 
 -- Find all authors whose names start with 'J'.
 SELECT * FROM authors 
-WHERE name LIKE 'J%';
+WHERE UPPER(name) LIKE 'J%';
 
 -- Find all books whose titles contain 'the'.
 SELECT * FROM books 

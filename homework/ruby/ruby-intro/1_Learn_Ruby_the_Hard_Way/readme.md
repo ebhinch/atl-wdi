@@ -100,13 +100,23 @@ Please answer the following questions in the spaces provided.
 
   ```ruby
     # your answer here
+    if this
+      puts this
+    elsif this_other_thing
+      puts this_other_thing
+    else last_thing
+      puts last_thing
+    end
   ```
 
 2.  Please write code that would take the string "007", reverse it,
     and return the integer `700`.
 
   ```ruby
-    # your answer here
+      hi = "077"
+      hi.reverse
+      puts hi
+      "700"
   ```
 
 3.  Please write code that takes the array `[23,56,3,7]`, sorts it,
@@ -114,37 +124,50 @@ Please answer the following questions in the spaces provided.
     (i.e. modifying the original array, rather than returning a new array).
 
   ```ruby
-    # your answer here
+    numbers = [23, 56, 3, 7]
+    numbers.sort!
+    numbers.reverse!
   ```
 
 3.  What does an exclamation point at the end of a method name usually signify?
 
   ```text
     Your answer here:
+    The exclamation point runs the same method that would run without the ! but instead of return a new array, etc., it actually makes changes to the data type you're dealing with...meaning if you reverse an array using reverse! the original array you began with is being changed itself.
   ```
 
 4.  What does a question mark and the end of a method name usually signify?
 
   ```text
     Your answer here:
+    Ruby methods ending in a question mark return a boolean value
   ```
 
 5.  How do you define a method in Ruby? Give a simple example.
 
   ```ruby
-    # your answer here
+      def i_am_a_method(a, z)
+        a * z
+      end
   ```
 
 6.  How do you create a class in Ruby? Give a simple example.
 
   ```ruby
-    # your answer here
+    class ImAClass
+      def initialize()
+        @classes = "this is your schedule for the semester"
+      end
   ```
 
 7. Please give an example of how iteration can be performed in Ruby.
 
   ```ruby
-    # your answer here
+      # your answer here, 
+      flowers = ['daisy', 'tulip', 'poinsettia']
+      flowers.each do |flower|
+      puts "This flower is a #{flower}"
+      end
   ```
 
 8.  If I modify a class in Ruby by adding a method, will instances of that class
@@ -153,4 +176,7 @@ Please answer the following questions in the spaces provided.
 
   ```text
     Your answer here:
+    Ruby has what are called "open classes", meaning classes can be modified at any point. 
+    
+    If you change a method in a module, all classes that include that module will change, those that have already been called and those that haven't. 
   ```
