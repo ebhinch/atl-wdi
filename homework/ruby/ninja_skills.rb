@@ -60,6 +60,23 @@ puts "What do you like to do?"
 fun = gets.chomp
 puts "#{name} likes to #{fun}"
 
+# Challenge 6: Arrays
+# Create a variable myFirstArray and set it equal to an empty array
+my_first_array = []
+# Set the variable myFirstArray to an array with five Strings and four Integers
+my_first_array = ["blue", "green", "orange", "pink", "yellow", 1, 2, 3, 4]
+# Using myFirstArray puts the last value of the array to the terminal
+puts my_first_array.last 
+# Using myFirstArray puts the first value of the array to the terminal
+puts my_first_array.first
+# Set the second value of myFirstArray to the String "Joe"
+my_first_array[1] = "Joe"
+# Set the third value of myFirstArray to the Integer 3
+my_first_array[2] = 3
+# Push the String Boolean true into myFirstArray
+# Puts the class of the fourth value in myFirstArray
+puts my_first_array[4].class
+
 
 
 
