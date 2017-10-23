@@ -18,6 +18,15 @@ puts im_nil
 # puts the class of the value of the variable to the terminal. Use the .class method. Look up this method on Google.
 puts im_nil.class
 
+# Challenge 3: Integers
+# Create a variable d and set it equal to a Fixnum
+d = 5
+puts d
+# Create a variable e and set it equal to a Float
+e = 5.5
+puts e
+
+
 
 
 
