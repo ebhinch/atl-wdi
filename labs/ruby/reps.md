@@ -33,6 +33,13 @@ fizzbuzzer(15) # => "FizzBuzz"
 fizzbuzzer(19) # => "Sorrels"
 ```
 
+words = ["hello", "what", "is", "up", "dude"]
+
+lengths = words.map do |word|
+  word.length
+end 
+
+
 ### Round 2
 
 Write a method `hasher` that accepts a single parameter as an argument, an array of arrays, and returns a hash based on the following conditions:
@@ -46,6 +53,22 @@ So given:
 array_to_test = [ ["Husker","Adama"], ["DrRobotmck"], [] ]
 hasher(array_to_test)  # => {"Husker" => "Adama", "DrRobotmck" => nil}
 ```
+
+  def fizzbuzzer(number)
+    if number % 15 == 0
+      puts "FizzBuzz"
+    elsif number % 3 == 0
+      puts "Fizz"
+      elsif number % 5 == 0
+        puts "Buzz"
+    else puts "Sorrels"
+    end
+  end
+    
+    fizzbuzzer(30)
+    fizzbuzzer(7)
+    fizzbuzzer(6)
+    fizzbuzzer(10)
 
 ### Round 3
 
@@ -64,6 +87,24 @@ hash_switcher({"hello" => "world"})
 hash_switcher([ {"hello" => "world"}, {"yo" => "lo"} ])
 # => [{"world" => "hello"}, {"lo" => "yo"}]
 ```
+
+array_to_test = [ ["Husker","Adama"], ["DrRobotmck"], [] ]
+
+
+  def hasher(array_of_arrays)
+    hash = {}
+    array_of_arrays.each do |contents|
+      if contents.length == 2 
+        hash[contents[0]] = contents[1]
+        elsif contents.length == 1 
+          hash[contents[0]] = nil
+        end
+    end
+    return hash
+end
+  
+  hasher(array_to_test)
+    
 
 ### Round 4
 
@@ -87,6 +128,20 @@ export_hash(["happy happy"], 5)
 # => nil
 ```
 
+def hash_switcher(parameter)
+    if parameter.class == Hash
+      parameter.invert
+        elsif parameter.class == Array
+          switched_array = parameter.map do |switch_me|
+            switch_me.invert
+        end
+    end
+end
+
+
+hash_switcher({"hello" => "world"})
+hash_switcher([ {"hello" => "world"}, {"yo" => "lo"} ])
+
 ### Round 5
 
 Write a method `word_reverse` that accepts a single argument, a string. The method should return a string with the order of the words reversed. Don't worry about punctuation.
@@ -97,6 +152,30 @@ word_reverse("this aint a song for the broken hearted")
 word_reverse("no silent prayer for the faith departed")
 # => "departed faith the for prayer silent no"
 ```
+
+def export_hash (array1, array2)
+  hash = {}
+  if array1.class != Array && array2.class != Array
+    return nil
+      elsif array2.class != Array && array1.class == Array
+        return nil
+          elsif array1.class != Array && array2.class == Array
+            return nil
+              elsif array1.class == Array && array2.class == Array
+                if array1.length != array2.length 
+                  return "Your input is bad, and you should feel bad"
+                elsif array1.length == array2.length
+                      array1.length.times do |index|
+                      hash[array1[index]] = array2[index] 
+               
+                end
+              hash
+            end
+     end
+ end
+
+export_hash(["happy", "sad"], ["joy", "sorrow"])
+
 
 ### Round 6
 
