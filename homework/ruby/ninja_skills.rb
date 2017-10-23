@@ -43,6 +43,27 @@ g_to_number = 2
 puts g + g_to_number
 puts g.to_i + g_to_number
 
+# Challenge 5: Input and Output
+# Create a small program that asks the user to input an Integer and multiplies the number by two.
+def small_program (integer)
+    puts "Please input an integer"
+    gets.chomp.to_i * 2
+end
+
+# Create a small program that does the following
+# Asks the user for their name
+# Asks the user what they like to do
+# Prints out the user's name and what they like to do in a sentence.
+puts "What is your name?"
+name = gets.chomp
+puts "What do you like to do?"
+fun = gets.chomp
+puts "#{name} likes to #{fun}"
+
+
+
+
+
 
 
 
