@@ -8,3 +8,16 @@ puts a == b
 # Write a statement using a and b that evaluates to true
 puts b != a 
 
+# Challenge 2: Nil
+# p the value of the variable to the terminal
+im_nil = nil
+# puts the value of the variable to the terminal concatenate the string "nil was here".
+puts "#{im_nil} was here"
+# print the value of the variable to the terminal
+puts im_nil
+# puts the class of the value of the variable to the terminal. Use the .class method. Look up this method on Google.
+puts im_nil.class
+
+
+
+
