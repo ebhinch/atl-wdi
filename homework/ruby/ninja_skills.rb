@@ -138,3 +138,20 @@ first_range.map do |number|
         number.to_s
     end 
 end
+
+# Challenge 9: Sum of Natural Numbers
+# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+# Find the sum of all the multiples of 3 or 5 below 1000 using Ruby.
+
+sum_range = (1..1000)
+array_range = sum_range.to_a
+start = 0
+
+array_range.each do |num|
+    if num % 3 == 0  || num % 5 == 0
+        start += num
+    end
+end
+
+puts start
