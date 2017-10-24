@@ -155,3 +155,32 @@ array_range.each do |num|
 end
 
 puts start
+
+
+# The Final Challenge: Prime Numbers
+# Write a method called check_prime? that will test whether a number is Prime. The method will return true if Prime, false if not.
+require "prime"
+
+def check_prime? (number)
+    if number.prime? == true
+        puts "#{number}, i am prime"
+    else
+        puts "#{number}, i am not prime"
+    end
+end
+
+# Write another method called get_primes that will print all the Primes up to an arbitrary limit. For example, if you invoke your method with get_primes(100), it will print all the Prime numbers up to and including 100.
+require "prime"
+
+def get_primes (limit)
+    prime_array = []
+    new_range_array = (1..limit).to_a
+    new_range_array.each do |number|
+      if number.prime? == true 
+        prime_array.push(number)
+      end
+  end 
+    puts prime_array
+  end
+  
+ 
