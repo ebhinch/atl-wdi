@@ -164,8 +164,10 @@ require "prime"
 def check_prime? (number)
     if number.prime? == true
         puts "#{number}, i am prime"
+        return true
     else
         puts "#{number}, i am not prime"
+        return false
     end
 end
 
